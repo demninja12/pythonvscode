@@ -71,6 +71,8 @@ if Menu == 'Order':
             st.write('Added to cart')
             app3 = (6.99)
 
+    st.subheader('')
+
     st.subheader('Main Meals')
 
     meal1,meal2,meal3 = st.columns(3)
@@ -100,6 +102,10 @@ if Menu == 'Order':
         if st.checkbox('Pork Hot Dog: $9.99'):
             st.write('Added to cart')
             mea3 = (9.99)
+    
+
+
+    st.subheader('')
 
 
 
@@ -121,6 +127,8 @@ if Menu == 'Order':
         if st.checkbox('Oranges: $4.99'):
             st.write('Added to cart')
             fru3 = (4.99)
+
+    st.subheader('')
 
     st.subheader('Desserts')
 
@@ -157,6 +165,8 @@ if Menu == 'Order':
             if st.checkbox('Candles: $2.99'):
                 st.write('Cake Customized')
                 des34 = (2.99)
+    
+    st.subheader('')
 
     st.subheader('Drinks')
 
@@ -184,6 +194,8 @@ if Menu == 'Order':
         if st.checkbox('Lemonade: $9.99'):
             st.write('Added to cart')
             dri3 = (9.99)
+    
+    st.subheader('')
     
     st.subheader('Create Your Own')
 
