@@ -334,8 +334,6 @@ if Menu == 'Order':
     
 
 if Menu == 'History':
-    left,center,right = st.columns(3)
-    with center:
-        if st.button('View History'):
-            st.table(csvlink)
+    if st.button('View History'):
+        st.table(csvlink)
 
