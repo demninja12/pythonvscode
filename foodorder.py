@@ -3,7 +3,9 @@ import pandas as pd
 
 st.set_page_config(page_title='Peggy Cafe',page_icon='☕')
 
-Menu = st.sidebar.selectbox('Menu',['Order','Rate'])
+csvlink = pd.read_csv('peggycafe.csv')
+
+Menu = st.sidebar.selectbox('Menu',['Order','History'])
 
 if Menu == 'Order':
 
@@ -322,24 +324,16 @@ if Menu == 'Order':
         st.write('Subtotal:',round(subtotal,2))
         st.write('Pig Tax:',tax)
         st.write('Total:',round(total,2))
+
+        historydict = {'Subtotal':[subtotal],
+                      'Pig Tax':[tax],
+                      'Total':[total]}
+        historytable = pd.DataFrame(historydict)
+        tablesjoin = pd.concat([csvlink,historytable],ignore_index=True)
+        tablesjoin.to_csv('peggycafe.csv',index=False)
     
 
-if Menu == 'Rate':
-    csvlink = pd.read_csv('rating.csv')
-    st.header('Rate our food')
-    
-    name = st.text_input('Name: ')
-
-    rating = st.number_input('Rating: ',0,10)
-
-    comment = st.text_input('Comment: ')
-
-    if st.button('Send'):
-        ratingdict = {'Name':[name],
-                      'Rating':[rating],
-                      'Comment':[comment]}
-        ratingtable = pd.DataFrame(ratingdict)
-        tablesjoin = pd.concat([csvlink,ratingtable],ignore_index=True)
-        tablesjoin.to_csv('rating.csv',index=False)
+if Menu == 'History':
+    if st.button('View'):
         st.table(csvlink)
 
