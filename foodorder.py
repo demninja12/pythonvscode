@@ -317,6 +317,9 @@ if Menu == 'Order':
 
     total = subtotal + tax
 
+    if st.checkbox('Sign In'):
+        name = st.text_input('Enter your name: ')
+
 
 
 
@@ -325,7 +328,8 @@ if Menu == 'Order':
         st.write('Pig Tax:',tax)
         st.write('Total:',round(total,2))
 
-        historydict = {'Subtotal':[subtotal],
+        historydict = {'Name':[name],
+                       'Subtotal':[subtotal],
                       'Pig Tax':[tax],
                       'Total':[total]}
         historytable = pd.DataFrame(historydict)
