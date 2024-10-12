@@ -342,6 +342,9 @@ if Menu == 'Order':
     
 
 if Menu == 'History':
-    if st.button('View History'):
-        st.table(csvlink)
+    ViewPass = st.text_input('Enter Viewing Password:',type='password')
+
+    if ViewPass == 'PeggyView':
+        if st.button('View History'):
+            st.table(csvlink)
 
