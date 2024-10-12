@@ -253,7 +253,7 @@ if Menu == 'Order':
             st.write('Added to cart')
     
     st.title('')
-    
+
     if st.checkbox('Sign In'):
         name = st.text_input('Enter your name: ')
 
@@ -323,9 +323,6 @@ if Menu == 'Order':
         tax = 0
 
     total = subtotal + tax
-
-    if st.checkbox('Sign In'):
-        name = st.text_input('Enter your name: ')
 
 
 
