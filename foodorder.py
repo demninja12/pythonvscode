@@ -249,6 +249,13 @@ if Menu == 'Order':
             st.write('Added to cart')
         if st.checkbox('Peanut Butter Crunch'):
             st.write('Added to cart')
+        if st.checkbox('Cookies & Cream'):
+            st.write('Added to cart')
+    
+    st.title('')
+    
+    if st.checkbox('Sign In'):
+        name = st.text_input('Enter your name: ')
 
     st.title('')#spacer
 
