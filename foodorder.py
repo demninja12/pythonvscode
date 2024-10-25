@@ -5,9 +5,9 @@ st.set_page_config(page_title='Peggy Cafe',page_icon='☕')
 
 csvlink = pd.read_csv('peggycafe.csv')
 
-Menu = st.sidebar.selectbox('Menu',['Order','History'])
+Menu = st.sidebar.selectbox('Menu',['Cafe','Other'])
 
-if Menu == 'Order':
+if Menu == 'Cafe':
 
     st.title('Peggy Cafe')
 
@@ -252,11 +252,6 @@ if Menu == 'Order':
         if st.checkbox('Cookies & Cream'):
             st.write('Added to cart')
     
-    st.title('')
-
-    if st.checkbox('Sign In'):
-        name = st.text_input('Enter your name: ')
-
     st.title('')#spacer
 
     tax = 0
@@ -332,8 +327,7 @@ if Menu == 'Order':
         st.write('Pig Tax:',tax)
         st.write('Total:',round(total,2))
 
-        historydict = {'Name':[name],
-                       'Subtotal':[subtotal],
+        historydict = {'Subtotal':[subtotal],
                       'Pig Tax':[tax],
                       'Total':[total]}
         historytable = pd.DataFrame(historydict)
@@ -341,10 +335,11 @@ if Menu == 'Order':
         tablesjoin.to_csv('peggycafe.csv',index=False)
     
 
-if Menu == 'History':
+if Menu == 'Other':
+    st.title('Other')
     ViewPass = st.text_input('Enter Viewing Password:',type='password')
-
+    
     if ViewPass == 'PeggyView':
-        if st.button('View History'):
-            st.table(csvlink)
+        st.subheader('Latest Purchases:')
+        st.table(csvlink)
 
