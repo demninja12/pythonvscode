@@ -37,17 +37,9 @@ if Menu == 'Cafe':
     dri3 = 0
     fea = 0
     ptc = 0
-    cyo1 = 0
-    cyo11 = 0
-    cyo12 = 0
-    cyo13 = 0
-    cyo14 = 0
-    cyo15 = 0
-    cyo16 = 0
-    cyo17 = 0
-
+    
     pt = 0
-
+    
     st.subheader('Appetizer')
 
     Appetizer1,Appetizer2,Appetizer3 = st.columns(3)
@@ -198,42 +190,10 @@ if Menu == 'Cafe':
             dri3 = (9.99)
     
     st.subheader('')
-    
-    st.subheader('Create Your Own')
 
-    create1,create2,create3 = st.columns(3)
-
-    with create1:
-        if st.checkbox('Burger: $5.99'):
-            st.write('')
-            cyo1 = (5.99)
-            if st.checkbox('Bun: $0.25'):
-                st.write('Added to burger')
-                cyo11 = (0.25)
-            if st.checkbox('Patty: $1.49'):
-                st.write('Added to burger')
-                cyo12 = (1.49)
-            if st.checkbox('Bacon: $1.99'):
-                st.write('Added to burger')
-                cyo13 = (1.99)
-            if st.checkbox('Lettuce: $0.99'):
-                st.write('Added to burger')
-                cyo14 = (0.99)
-            if st.checkbox('Tomato: $1.49'):
-                st.write('Added to burger')
-                cyo15 = (1.49)
-            if st.checkbox('Cheese: $0.99'):
-                st.write('Added to burger')
-                cyo16 = (0.99)
-            if st.checkbox('Pickles: $0.99'):
-                st.write('Added to burger')
-                cyo17 = (0.99)
-            if st.checkbox('Ketchup: FREE'):
-                st.write('Added to burger')
-
-    st.title(' ')
     st.subheader('Feastables')
-    if st.checkbox('Buy Feastables: $2.99'):
+    
+    if st.checkbox('Feastables: $2.99'):
         fea = (2.99)
         if st.checkbox('Milk Chocolate'):
             st.write('Added to cart')
@@ -261,7 +221,7 @@ if Menu == 'Cafe':
         pt = (1)
         ptc = (19.99)
 
-    subtotal = app1 + app2 + app3 + mea1 + mea21 + mea22 + mea23 + mea24 + mea3 + fru1 + fru2 + fru3 + des1 + des2 + des3 + des31 + des32 + des33 + des34 + dri1 + dri2 + dri3 + cyo1 + cyo11 + cyo12 + cyo13 + cyo14 + cyo15 + cyo16 + cyo17 + fea + ptc
+    subtotal = app1 + app2 + app3 + mea1 + mea21 + mea22 + mea23 + mea24 + mea3 + fru1 + fru2 + fru3 + des1 + des2 + des3 + des31 + des32 + des33 + des34 + dri1 + dri2 + dri3 + fea + ptc
 
     if subtotal < 5:
         tax = 0
