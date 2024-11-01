@@ -302,4 +302,6 @@ if Menu == 'Other':
     if ViewPass == 'PeggyView':
         st.subheader('Latest Purchases:')
         st.table(csvlink)
+    
+    st.header('We had some dificulty saving')
 
