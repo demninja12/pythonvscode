@@ -303,5 +303,5 @@ if Menu == 'Other':
         st.subheader('Latest Purchases:')
         st.table(csvlink)
     
-    st.header('We had some dificulty saving')
+
 
