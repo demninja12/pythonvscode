@@ -17,11 +17,14 @@ if Menu == 'Cafe':
     app2 = 0
     app3 = 0
     mea1 = 0
+    mea111 = 0
     mea21 = 0
     mea22 = 0
     mea23 = 0
     mea24 = 0
+    mea222 = 0
     mea3 = 0
+    mea333 = 0
     fru1 = 0
     fru2 = 0
     fru3 = 0
@@ -35,7 +38,9 @@ if Menu == 'Cafe':
     dri1 = 0
     dri2 = 0
     dri3 = 0
-    fea = 0
+    km1 = 0
+    km2 = 0
+    km3 = 0
     ptc = 0
     
     pt = 0
@@ -45,13 +50,13 @@ if Menu == 'Cafe':
     Appetizer1,Appetizer2,Appetizer3 = st.columns(3)
 
     with Appetizer1:
-        if st.checkbox('Mozzarella Sticks: $6.99'):
+        if st.checkbox('Mozzarella Sticks: $4.99'):
             st.write('Added to cart')
-            app1 = (6.99)
+            app1 = (4.99)
 
     with Appetizer2:
-        if st.checkbox('Chicken Wings: $9.99'):
-            app2 = (9.99)
+        if st.checkbox('Chicken Wings: $6.99'):
+            app2 = (6.99)
             st.write('Sauce (FREE)')
             if st.checkbox('Barbeque'):
                 st.write('Added to cart')
@@ -61,9 +66,9 @@ if Menu == 'Cafe':
                 st.write('Added to cart')
 
     with Appetizer3:
-        if st.checkbox('Shrimps on a Stick: $6.99'):
+        if st.checkbox('Shrimps: $5.99'):
             st.write('Added to cart')
-            app3 = (6.99)
+            app3 = (5.99)
 
     st.subheader('')
 
@@ -72,36 +77,58 @@ if Menu == 'Cafe':
     meal1,meal2,meal3 = st.columns(3)
 
     with meal1:
-        if st.checkbox('Giant Pork Burger: $14.99'):
+        if st.checkbox('Bacon Burger: $9.99'):
             st.write('Added to cart')
-            mea1 = (14.99)
-            
+            mea1 = (9.99)
+        st.write('')
+        if st.checkbox('Taco'):
+            tacoa = st.number_input('Amount of Tacos:',2,8,2,2)
+            st.write('2 tacos = $3.99')
 
+            if tacoa == 2:
+                st.write('Added to cart')
+                mea111 = (3.99)
+            elif tacoa == 4:
+                st.write('Added to cart')
+                mea111 = (7.98)
+            elif tacoa == 6:
+                st.write('Added to cart')
+                mea111 = (11.97)   
+            elif tacoa == 8:
+                st.write('Added to cart')
+                mea111 = (15.96)
+            else:
+                st.write('???')
+            
     with meal2:
         if st.checkbox('Extra Pork Pizza'):
-            if st.checkbox('X-Large: $24.99'):
+            if st.checkbox('X-Large: $18.99'):
                 st.write('Added to cart')
-                mea24 = (24.99)
-            if st.checkbox('Large: $19.99'):
+                mea24 = (18.99)
+            if st.checkbox('Large: $13.99'):
                 st.write('Added to cart')
-                mea21 = (19.99)
-            if st.checkbox('Medium: $14.99'):
+                mea21 = (13.99)
+            if st.checkbox('Medium: $9.99'):
                 st.write('Added to cart')
-                mea22 = (14.99)
-            if st.checkbox('Small: $9.99'):
+                mea22 = (9.99)
+            if st.checkbox('Small: $5.99'):
                 st.write('Added to cart')
-                mea23 = (9.99)
+                mea23 = (5.99)
+        st.write('')
+        if st.checkbox('Cheese Bacon Burger: $9.99'):
+            st.write('Added to cart')
+            mea222 = (9.99)
 
     with meal3:
-        if st.checkbox('Pork Hot Dog: $9.99'):
+        if st.checkbox('Hot Dog: $7.99'):
             st.write('Added to cart')
-            mea3 = (9.99)
+            mea3 = (7.99)
+        st.write('')
+        if st.checkbox('Chicken Bacon Burger: $9.99'):
+            st.write('Added to cart')
+            mea333 = (9.99)
     
-
-
     st.subheader('')
-
-
 
     st.subheader('Fruits')
 
@@ -129,7 +156,7 @@ if Menu == 'Cafe':
     dessert1,dessert2,dessert3 = st.columns(3)
 
     with dessert1:
-        if st.checkbox('ice cream: $6.99'):
+        if st.checkbox('Ice cream: $6.99'):
             des1 = (6.99)
             if st.checkbox('Chocolate'):
                 st.write('Added to cart')
@@ -139,9 +166,9 @@ if Menu == 'Cafe':
                 st.write('Added to cart')
 
     with dessert2:
-        if st.checkbox('Cookie: $4.99'):
+        if st.checkbox('Cookie: $2.99'):
             st.write('Added to cart')
-            des2 = (4.99)
+            des2 = (2.99)
 
     with dessert3:
         if st.checkbox('Cake: $14.99'):
@@ -191,28 +218,26 @@ if Menu == 'Cafe':
     
     st.subheader('')
 
-    st.subheader('Feastables')
+    st.subheader('Kids Menu')
+
+    kids1,kids2,kids3 = st.columns(3)
+
+    with kids1:
+        if st.checkbox('Mini Bacon Burger: $4.99'):
+            st.write('Added to cart')
+            km1 = (4.99)
+        
+    with kids2:
+        if st.checkbox('Pork Pizza: $4.99'):
+            st.write('Added to cart')
+            km2 = (4.99)
     
-    if st.checkbox('Feastables: $2.99'):
-        fea = (2.99)
-        if st.checkbox('Milk Chocolate'):
+    with kids3:
+        if st.checkbox('Mini Hot Dog: $4.99'):
             st.write('Added to cart')
-        if st.checkbox('Milk Crunch'):
-            st.write('Added to cart')
-        if st.checkbox('Almond'):
-            st.write('Added to cart')
-        if st.checkbox('Dark Chocolate'):
-            st.write('Added to cart')
-        if st.checkbox('Dark Chocolate Sea Salt'):
-            st.write('Added to cart')
-        if st.checkbox('Peanut Butter'):
-            st.write('Added to cart')
-        if st.checkbox('Peanut Butter Crunch'):
-            st.write('Added to cart')
-        if st.checkbox('Cookies & Cream'):
-            st.write('Added to cart')
+            km3 = (4.99)
     
-    st.title('')#spacer
+    st.subheader('')
 
     tax = 0
 
@@ -221,7 +246,7 @@ if Menu == 'Cafe':
         pt = (1)
         ptc = (19.99)
 
-    subtotal = app1 + app2 + app3 + mea1 + mea21 + mea22 + mea23 + mea24 + mea3 + fru1 + fru2 + fru3 + des1 + des2 + des3 + des31 + des32 + des33 + des34 + dri1 + dri2 + dri3 + fea + ptc
+    subtotal = app1 + app2 + app3 + mea1 + mea111 + mea21 + mea22 + mea23 + mea24 + mea222 + mea3 + mea333 + fru1 + fru2 + fru3 + des1 + des2 + des3 + des31 + des32 + des33 + des34 + dri1 + dri2 + dri3 + km1 + km2 + km3 + ptc
 
     if subtotal < 5:
         tax = 0
@@ -302,6 +327,6 @@ if Menu == 'Other':
     if ViewPass == 'PeggyView':
         st.subheader('Latest Purchases:')
         st.table(csvlink)
-    
+
 
 

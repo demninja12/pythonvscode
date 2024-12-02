@@ -1,0 +1,80 @@
+1.
+3_000_000_000 = Integer
+3.141592 = Float
+True = Boolean
+"True" = String
+
+
+
+2.
+?
+
+
+
+3.
+1 = int(
+2 = input(
+3 = "Enter immersion depth")
+4 = )
+
+
+
+4.
+?
+
+
+
+5.
+1 = print
+2 = (
+3 = x, y,
+4 = sep=";"
+5 = )
+
+
+
+6.
+?
+
+
+
+7.
+?
+
+
+
+8.
+The code outputs 1
+
+
+
+9.
+The code prints 0
+
+
+
+10.
+#no answer
+
+
+
+11.
+five
+
+
+
+12.
+1 = if
+2 = temperature
+3 = ==
+4 = 0.0
+5 = :
+
+
+
+13:
+*
+
+
+
+14:
